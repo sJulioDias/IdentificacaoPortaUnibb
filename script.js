@@ -17,10 +17,10 @@ document.getElementById('form-card').addEventListener('submit', function(e) {
     // pega o <strong> que está antes do span out-ed1
 
     if(ed2.trim() !== "") {
-        // Dois educadores
+        // Dois educadores → concatenados com "e"
         labelEducadores.innerText = "Educadores/as:";
-        outEd1.innerText = ed1.toUpperCase();
-        containerEd2.innerHTML = `<div class="info-item educadores-list">${ed2.toUpperCase()}</div>`;
+        outEd1.innerText = `${ed1.toUpperCase()} e ${ed2.toUpperCase()}`;
+        containerEd2.innerHTML = ""; // não precisamos mais de container separado
     } else {
         // Apenas um educador
         labelEducadores.innerText = "Educador/a:";
